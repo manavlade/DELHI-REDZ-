@@ -25,6 +25,7 @@ import { Badge } from "./ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatedTestimonials } from "./ui/animated-testimonials";
+import { Button } from "./ui/button";
 
 
 const HomePage = () => {
@@ -192,19 +193,34 @@ const HomePage = () => {
                         </section>
                     </div> */}
 
-                    {/* purpose section */}
                     <div>
-                        <section className="bg-black text-white py-16 px-4 md:px-12">
-                            <h1 className=" font-bold tetx-2xl md:text-5xl text-center" >Our Purpose</h1>
-                            <div className="max-w-7xl mx-auto">
-                                <div>
+                        <section className="bg-black text-white px-4 md:px-12 py-20">
+                            <div className="max-w-5xl mx-auto text-center relative">
+                                <h2 className="text-2xl md:text-5xl font-bold mb-8">Our Manifesto</h2>
 
-                                    {/* Title and Description */}
-                                    {/* <h2 className="text-3xl md:text-3xl font-bold leading-snug px-4 md:px-12 pt-6">
-                                        The Delhi Redz is built on RMZ’s philosophy of Shaping Tomorrow — investing in culture, sport, and community impact. We Are:
-                                    </h2> */}
+                                <div className="bg-gradient-to-br from-[#1a1a1a] to-black border border-white/10 rounded-xl p-8 md:p-12 shadow-xl">
+                                    <p className="text-xl md:text-2xl italic text-gray-300 leading-relaxed relative z-10">
+                                        “This is more than a game. It is a movement. A calling. <br />
+                                        We play for the team. For the fans. For Delhi. <br />
+                                        We are not just building a team—we are building the future of Indian rugby.”
+                                    </p>
+
+                                    <p className="mt-6 text-red-500 font-bold text-lg">#DilDilMeinRedz</p>
                                 </div>
 
+                                {/* Optional decorative background */}
+                                <div className="absolute -top-8 -left-6 w-32 h-32 bg-red-500 opacity-20 rounded-full blur-3xl hidden md:block" />
+                                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500 opacity-20 rounded-full blur-3xl hidden md:block" />
+                            </div>
+                        </section>
+
+                    </div>
+
+                    {/* purpose section */}
+                    <div>
+                        <section className="bg-black text-white px-4 md:px-12">
+                            <h1 className=" font-bold tetx-2xl md:text-5xl text-center" >Our Purpose</h1>
+                            <div className="max-w-7xl mx-auto">
                                 {/* Feature Cards */}
                                 <section className="bg-black text-white py-16 px-4 md:px-12">
                                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -235,7 +251,7 @@ const HomePage = () => {
                     {/* about rpl section */}
                     <div>
                         <section className="bg-black text-white px-4 md:px-12">
-                            <h1 className=" font-bold tetx-2xl md:text-5xl text-center pb-6">About RPL</h1>
+                            <h1 className=" font-bold tetx-2xl md:text-5xl text-center mb-10">About RPL</h1>
                             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {highlights.map(({ icon: Icon, title, description }, index) => (
                                     <Card
@@ -347,45 +363,107 @@ const HomePage = () => {
                         </section>
                     </div>
 
+                    <div>
+                        <section className="bg-black text-white px-4 md:px-12 py-16">
+                            <h1 className="font-bold text-2xl md:text-5xl text-center pb-12">Shop Now</h1>
+
+                            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {/* Card 1: Shirt */}
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300">
+                                    <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                                        <img src="/assests/players/REDZ Candid Photoshoot-16.jpg" alt="Team Shirt" className="w-full h-48 object-cover rounded-md" />
+                                        <h3 className="text-white text-xl font-semibold">Team Shirt</h3>
+                                        <p className="text-gray-400 text-sm">Official RPL merchandise for fans and players alike.</p>
+                                        <p className="text-white font-bold text-lg">₹799</p>
+                                        <Button variant="default" className="bg-red-600 hover:bg-red-700 transition-colors">
+                                            Add to Cart
+                                        </Button>
+                                    </CardContent>
+                                </Card>
+
+                                {/* Card 2: Shorts */}
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300">
+                                    <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                                        <img src="/assests/players/REDZ Candid Photoshoot-16.jpg" alt="Team Shorts" className="w-full h-48 object-cover rounded-md" />
+                                        <h3 className="text-white text-xl font-semibold">Team Shorts</h3>
+                                        <p className="text-gray-400 text-sm">Lightweight and durable shorts for performance.</p>
+                                        <p className="text-white font-bold text-lg">₹499</p>
+                                        <Button variant="default" className="bg-red-600 hover:bg-red-700 transition-colors">
+                                            Add to Cart
+                                        </Button>
+                                    </CardContent>
+                                </Card>
+
+                                {/* Card 3: Shoes */}
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300">
+                                    <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                                        <img src="/assests/players/REDZ Candid Photoshoot-16.jpg" alt="Rugby Shoes" className="w-full h-48 object-cover rounded-md" />
+                                        <h3 className="text-white text-xl font-semibold">Rugby Shoes</h3>
+                                        <p className="text-gray-400 text-sm">High-traction shoes built for speed and grip.</p>
+                                        <p className="text-white font-bold text-lg">₹1,299</p>
+                                        <Button variant="default" className="bg-red-600 hover:bg-red-700 transition-colors">
+                                            Add to Cart
+                                        </Button>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </section>
+
+                    </div>
+
                     {/* footer */}
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12 py-12">
-                            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+                        <section className="bg-black text-white px-4 md:px-12 py-16">
+                            <h1 className="font-bold text-2xl md:text-5xl text-center mb-12">Contact Us</h1>
+                            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                                {/* Email */}
-                                <div className="space-y-4">
-                                    <Mail className="h-8 w-8 mx-auto md:mx-0" />
-                                    <h3 className="text-xl font-bold">Email</h3>
-                                    <p className="text-white">For sponsorships or partnerships, reach out to us directly.</p>
-                                    <Link href="mailto:contact@delhiredz.in" className="text-blue-600 hover:underline">
-                                        contact@delhiredz.in
-                                    </Link>
-                                </div>
+                                {/* Email Card */}
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow">
+                                    <CardContent className="p-6 space-y-4 text-center md:text-left">
+                                        <div className="flex items-center gap-5">
+                                            <Mail className="h-8 w-8 mx-auto md:mx-0 text-white" />
+                                            <h3 className="text-xl text-white font-bold">Email</h3>
+                                        </div>
+                                        <p className="text-gray-400">For sponsorships or partnerships, reach out to us directly.</p>
+                                        <Link href="mailto:contact@delhiredz.in" className="text-blue-600 hover:underline block">
+                                            contact@delhiredz.in
+                                        </Link>
+                                    </CardContent>
+                                </Card>
 
-                                {/* Phone */}
-                                <div className="space-y-4">
-                                    <Phone className="h-8 w-8 mx-auto md:mx-0" />
-                                    <h3 className="text-xl font-bold">Phone</h3>
-                                    <p className="text-white">Call us for inquiries or collaboration opportunities.</p>
-                                    <Link href="tel:+919876543210" className="text-blue-600 hover:underline">
-                                        +91 98765 43210
-                                    </Link>
-                                </div>
+                                {/* Phone Card */}
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow">
+                                    <CardContent className="p-6 space-y-4 text-center md:text-left">
+                                        <div className="flex items-center gap-5">
+                                            <Phone className="h-8 w-8 mx-auto md:mx-0 text-white" />
+                                            <h3 className="text-xl text-white font-bold">Phone</h3>
+                                        </div>
+                                        <p className="text-gray-400">Call us for inquiries or collaboration opportunities.</p>
+                                        <Link href="tel:+919876543210" className="text-blue-600 hover:underline block">
+                                            +91 98765 43210
+                                        </Link>
+                                    </CardContent>
+                                </Card>
 
-                                {/* Office */}
-                                <div className="space-y-4">
-                                    <MapPin className="h-8 w-8 mx-auto md:mx-0" />
-                                    <h3 className="text-xl font-bold">Office</h3>
-                                    <p className="text-white">Visit us for discussions and collaborations.</p>
-                                    <Link
-                                        href="https://maps.google.com?q=456+Rugby+Lane,+Delhi,+India+110001"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-600 hover:underline"
-                                    >
-                                        456 Rugby Lane, Delhi, India 110001
-                                    </Link>
-                                </div>
+                                {/* Office Card */}
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow">
+                                    <CardContent className="p-6 space-y-4 text-center md:text-left">
+                                        <div className="flex items-center gap-5">
+                                            <MapPin className="h-8 w-8 mx-auto md:mx-0 text-white" />
+                                            <h3 className="text-xl text-white font-bold">Office</h3>
+                                        </div>
+                                        <p className="text-gray-400">Visit us for discussions and collaborations.</p>
+                                        <Link
+                                            href="https://maps.google.com?q=456+Rugby+Lane,+Delhi,+India+110001"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 hover:underline block"
+                                        >
+                                            456 Rugby Lane, Delhi, India 110001
+                                        </Link>
+                                    </CardContent>
+                                </Card>
+
                             </div>
                         </section>
                     </div>
