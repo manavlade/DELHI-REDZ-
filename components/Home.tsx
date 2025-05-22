@@ -170,31 +170,12 @@ const HomePage = () => {
                                 Welcome to the Delhi Redz, where passion meets purpose in the heart of Indian rugby.
                                 Together, we’re not just playing a game; we’re igniting a movement that unites fans and athletes alike.
                             </p>
-                            <div className="flex justify-center gap-4">
-                                <button className="bg-white text-black px-6 py-2 font-semibold hover:bg-gray-200 transition">
-                                    Join
-                                </button>
-                                <button className="border border-white px-6 py-2 font-semibold hover:bg-white hover:text-black transition">
-                                    Learn More
-                                </button>
-                            </div>
+                            
                         </div>
                     </section>
 
-                    {/* <div>
-                        <section className="bg-black text-white py-16 px-4 md:px-12">
-                            <h1 className=" font-bold tetx-2xl md:text-5xl text-center" >Our Manifesto</h1>
-                            <div className="max-w-7xl mx-auto">
-                                <h2 className="text-3xl md:text-3xl font-bold leading-snug px-4 md:px-12 pt-6">
-                                    This is more than a game. It is a movement. A calling. We play for the team. For the fans. For Delhi. We are not just building a team—we are building the future of Indian rugby.
-                                    #DilDilMeinRedz
-                                </h2>
-                            </div>
-                        </section>
-                    </div> */}
-
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12 py-20">
+                        <section className="bg-black text-white px-4 md:px-12 py-20" id="manifesto">
                             <div className="max-w-5xl mx-auto text-center relative">
                                 <h2 className="text-2xl md:text-5xl font-bold mb-8">Our Manifesto</h2>
 
@@ -218,7 +199,7 @@ const HomePage = () => {
 
                     {/* purpose section */}
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12">
+                        <section className="bg-black text-white px-4 md:px-12" id="purpose">
                             <h1 className=" font-bold tetx-2xl md:text-5xl text-center" >Our Purpose</h1>
                             <div className="max-w-7xl mx-auto">
                                 {/* Feature Cards */}
@@ -250,7 +231,7 @@ const HomePage = () => {
 
                     {/* about rpl section */}
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12">
+                        <section className="bg-black text-white px-4 md:px-12" id="about">
                             <h1 className=" font-bold tetx-2xl md:text-5xl text-center mb-10">About RPL</h1>
                             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {highlights.map(({ icon: Icon, title, description }, index) => (
@@ -274,7 +255,7 @@ const HomePage = () => {
                     </div>
 
                     {/* our team section */}
-                    <section className="bg-black text-white px-4 md:px-12 py-12">
+                    <section className="bg-black text-white px-4 md:px-12 py-12" id="team">
                         <h1 className="font-bold text-2xl md:text-5xl text-center pb-10">Meet The Team</h1>
 
                         <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#1a1a1a] to-black rounded-2xl border border-white/10 shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
@@ -337,7 +318,7 @@ const HomePage = () => {
                     </div>
 
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12 py-16">
+                        <section className="bg-black text-white px-4 md:px-12 py-16" id="why">
                             <h1 className="font-bold text-2xl md:text-5xl text-center pb-12">
                                 WHY RUGBY, WHY NOW?
                             </h1>
@@ -364,7 +345,7 @@ const HomePage = () => {
                     </div>
 
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12 py-16">
+                        <section className="bg-black text-white px-4 md:px-12 py-16" id="shop">
                             <h1 className="font-bold text-2xl md:text-5xl text-center pb-12">Shop Now</h1>
 
                             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -413,7 +394,7 @@ const HomePage = () => {
 
                     {/* footer */}
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12 py-16">
+                        <section className="bg-black text-white px-4 md:px-12 py-16" id="contact">
                             <h1 className="font-bold text-2xl md:text-5xl text-center mb-12">Contact Us</h1>
                             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -468,7 +449,7 @@ const HomePage = () => {
                         </section>
                     </div>
 
-                    <footer className="bg-white text-black px-4 md:px-12 py-12 border-t">
+                    <footer className="bg-black text-white px-4 md:px-12 py-12 border-t">
                         <div className="max-w-7xl mx-auto flex flex-col items-center text-center space-y-6">
                             {/* Logo & Contact */}
                             <h1 className="text-3xl font-semibold font-cursive">Logo</h1>

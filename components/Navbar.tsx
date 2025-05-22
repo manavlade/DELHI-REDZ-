@@ -13,18 +13,30 @@ const Navbar = () => {
 
                 {/* Navigation Links */}
                 <ul className="hidden md:flex gap-8 text-sm font-medium items-center">
-                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">About Us</li>
-                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">Our Purpose</li>
-                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">About RPL</li>
-                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">Our Team</li>
-                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">Why Rugby</li>
-                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">Shop</li>
+                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
+                        <a href="#manifesto">About Us</a>
+                    </li>
+
+                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
+                        <a href="#purpose">Our Purpose</a>
+                    </li>
+                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
+                        <a href="#about">About RPL</a>
+                    </li>
+                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
+                        <a href="#team">Our Team</a></li>
+                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
+                        <a href="#why">Why Rugby</a></li>
+                    <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
+                        <a href="#shop">Shop</a></li>
                 </ul>
 
                 {/* Contact Button */}
                 <div>
                     <Button variant="default" className="bg-red-600 hover:bg-red-700 transition-colors">
-                        Contact Us
+                        <a href="#contact">
+                            Contact Us
+                        </a>
                     </Button>
                 </div>
             </nav>
