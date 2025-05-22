@@ -170,7 +170,7 @@ const HomePage = () => {
                                 Welcome to the Delhi Redz, where passion meets purpose in the heart of Indian rugby.
                                 Together, we’re not just playing a game; we’re igniting a movement that unites fans and athletes alike.
                             </p>
-                            
+
                         </div>
                     </section>
 

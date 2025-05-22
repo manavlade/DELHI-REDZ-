@@ -24,11 +24,14 @@ const Navbar = () => {
                         <a href="#about">About RPL</a>
                     </li>
                     <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
-                        <a href="#team">Our Team</a></li>
+                        <a href="#team">Our Team</a>
+                    </li>
                     <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
-                        <a href="#why">Why Rugby</a></li>
+                        <a href="#why">Why Rugby</a>
+                    </li>
                     <li className="hover:text-red-500 transition-colors duration-200 cursor-pointer">
-                        <a href="#shop">Shop</a></li>
+                        <a href="#shop">Shop</a>
+                    </li>
                 </ul>
 
                 {/* Contact Button */}
