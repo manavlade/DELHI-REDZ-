@@ -233,7 +233,7 @@ const HomePage = () => {
                                             >
                                                 <CardContent className="flex items-start gap-4 p-6">
                                                     <div className="flex-shrink-0">
-                                                        <Box className="h-10 w-10 text-[#B6995A]" />
+                                                        <feature.icon className="h-10 w-10 text-[#B6995A]" />
                                                     </div>
                                                     <div>
                                                         <h3 className="text-xl text-[#B6995A] font-bold">{feature.title}</h3>
@@ -246,7 +246,6 @@ const HomePage = () => {
                                 </section>
                             </div>
                         </section>
-
                     </div>
 
 
