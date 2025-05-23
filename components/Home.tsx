@@ -17,7 +17,9 @@ import {
     Linkedin,
     Youtube,
     X,
-    Trophy, School, TrendingUp, Flame
+    Trophy, School, TrendingUp, Flame,
+    Telescope,
+    Rocket
 } from "lucide-react";
 import Navbar from "./Navbar";
 import { Card, CardContent, CardHeader } from "./ui/card";
@@ -26,29 +28,36 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatedTestimonials } from "./ui/animated-testimonials";
 import { Button } from "./ui/button";
+import { ShineBorder } from "./magicui/shine-border";
 
 
 const HomePage = () => {
+
     const features = [
         {
             title: "Relentless",
             subtitle: "Grit. Fire. Determination.",
+            icon: Flame, // symbol of energy and grit
         },
         {
             title: "Proudly Indian",
             subtitle: "Rooted in Delhi, rising for the nation.",
+            icon: Flag, // represents patriotism
         },
         {
             title: "Visionary",
             subtitle: "Reimagining Indian sport through innovation.",
+            icon: Telescope, // symbolizes vision and foresight
         },
         {
             title: "Inclusive",
             subtitle: "A team that speaks for all of India.",
+            icon: Users, // represents community and diversity
         },
         {
             title: "Empowering",
             subtitle: "Building platforms for youth and pride for the nation.",
+            icon: Rocket, // symbolizes growth and empowerment
         },
     ];
 
@@ -163,8 +172,17 @@ const HomePage = () => {
                         </video>
                         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10" />
                         <div className="z-20 px-4">
+                            <div className="mb-6 flex items-center justify-center">
+                                <Image
+                                    src="/assests/DR_LOGO.png"
+                                    alt="logo"
+                                    width={150}
+                                    height={150}
+                                    className="md:h-80 md:w-80 h-40 w-40"
+                                />
+                            </div>
                             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                                DELHI REDZ Dil Dil Mein Redz
+                                Dil Dil Mein Redz
                             </h1>
                             <p className="text-lg max-w-xl mx-auto mb-8">
                                 Welcome to the Delhi Redz, where passion meets purpose in the heart of Indian rugby.
@@ -199,23 +217,26 @@ const HomePage = () => {
 
                     {/* purpose section */}
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12" id="purpose">
-                            <h1 className=" font-bold tetx-2xl md:text-5xl text-center" >Our Purpose</h1>
+                        <section id="purpose" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
+                            <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">
+                                Our Purpose
+                            </h1>
+
                             <div className="max-w-7xl mx-auto">
                                 {/* Feature Cards */}
-                                <section className="bg-black text-white py-16 px-4 md:px-12">
-                                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <section className="py-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                         {features.map((feature, idx) => (
                                             <Card
                                                 key={idx}
-                                                className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300"
+                                                className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-2xl transition-shadow duration-300"
                                             >
                                                 <CardContent className="flex items-start gap-4 p-6">
                                                     <div className="flex-shrink-0">
-                                                        <Box className="h-10 w-10 text-white" />
+                                                        <Box className="h-10 w-10 text-[#B6995A]" />
                                                     </div>
                                                     <div>
-                                                        <h3 className="text-xl text-white font-bold">{feature.title}</h3>
+                                                        <h3 className="text-xl text-[#B6995A] font-bold">{feature.title}</h3>
                                                         <p className="text-gray-400 text-sm mt-1">{feature.subtitle}</p>
                                                     </div>
                                                 </CardContent>
@@ -223,28 +244,29 @@ const HomePage = () => {
                                         ))}
                                     </div>
                                 </section>
-
                             </div>
                         </section>
+
                     </div>
 
 
                     {/* about rpl section */}
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12" id="about">
-                            <h1 className=" font-bold tetx-2xl md:text-5xl text-center mb-10">About RPL</h1>
+                        <section id="about" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
+                            <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">About RPL</h1>
+
                             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {highlights.map(({ icon: Icon, title, description }, index) => (
                                     <Card
                                         key={index}
-                                        className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300"
+                                        className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-2xl transition-shadow duration-300"
                                     >
                                         <CardContent className="flex items-start gap-4 p-6">
                                             <div className="flex-shrink-0">
-                                                <Icon className="h-10 w-10 text-white" />
+                                                <Icon className="h-10 w-10 text-[#B6995A]" />
                                             </div>
                                             <div>
-                                                <h3 className="text-lg text-white font-bold">{title}</h3>
+                                                <h3 className="text-lg text-[#B6995A] font-bold">{title}</h3>
                                                 <p className="text-gray-400 text-sm mt-1">{description}</p>
                                             </div>
                                         </CardContent>
@@ -252,20 +274,20 @@ const HomePage = () => {
                                 ))}
                             </div>
                         </section>
+
                     </div>
 
                     {/* our team section */}
-                    <section className="bg-black text-white px-4 md:px-12 py-12" id="team">
-                        <h1 className="font-bold text-2xl md:text-5xl text-center pb-10">Meet The Team</h1>
+                    <section id="team" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
+                        <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">Meet The Team</h1>
 
-                        <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#1a1a1a] to-black rounded-2xl border border-white/10 shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
-
+                        <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#1a1a1a] to-black rounded-2xl border border-[#B6995A]/20 shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
                             {/* Left Side - Text Content */}
                             <div className="flex-1 space-y-4">
-                                <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-sm text-white uppercase tracking-widest font-semibold">
+                                <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-sm text-[#B6995A] uppercase tracking-widest font-semibold">
                                     Head Coach
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold text-white">TOMASI CAMA</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold text-[#B6995A]">TOMASI CAMA</h2>
                                 <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                                     Tomasi Cama Jr. is a Fijian-born rugby sevens legend who became the all-time leading points scorer
                                     for the All Blacks Sevens and was named World Rugby Sevens Player of the Year in 2012.
@@ -284,16 +306,17 @@ const HomePage = () => {
                             </div>
                         </div>
                     </section>
-                    <section className="bg-black text-white px-4 md:px-12 py-12">
 
-                        <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#1a1a1a] to-black rounded-2xl border border-white/10 shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
+                    <section className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
+
+                        <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#1a1a1a] to-black rounded-2xl border border-[#B6995A]/20 shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
 
                             {/* Left Side - Text Content */}
                             <div className="flex-1 space-y-4">
-                                <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-sm text-white uppercase tracking-widest font-semibold">
+                                <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-sm text-[#B6995A] uppercase tracking-widest font-semibold">
                                     Assistant Coach
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold text-white"> ARUN DAGAR</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold text-[#B6995A]"> ARUN DAGAR</h2>
                                 <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                                     Arun Dagar is a dynamic Indian rugby scrum-half known for his speed, who has represented India in major tournaments like the 2019 World Cup Qualifiers and Asian Five Nations
                                 </p>
@@ -312,13 +335,13 @@ const HomePage = () => {
                         </div>
                     </section>
 
-                    <div className="bg-black text-white px-4 md:px-12 py-12">
+                    <div className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
                         <h1 className="font-bold text-2xl md:text-5xl text-center pb-10">What Our Players Say</h1>
                         <AnimatedTestimonials testimonials={testimonials} />
                     </div>
 
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12 py-16" id="why">
+                        <section id="why" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
                             <h1 className="font-bold text-2xl md:text-5xl text-center pb-12">
                                 WHY RUGBY, WHY NOW?
                             </h1>
@@ -327,14 +350,14 @@ const HomePage = () => {
                                 {rugbyHighlights.map(({ icon: Icon, title, description }, index) => (
                                     <Card
                                         key={index}
-                                        className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300"
+                                        className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-xl transition-shadow duration-300"
                                     >
                                         <CardContent className="flex items-start gap-4 p-6">
                                             <div className="flex-shrink-0">
-                                                <Icon className="h-10 w-10 text-white" />
+                                                <Icon className="h-10 w-10 text-[#B6995A]" />
                                             </div>
                                             <div>
-                                                <h3 className="text-lg text-white font-bold">{title}</h3>
+                                                <h3 className="text-lg text-[#B6995A] font-bold">{title}</h3>
                                                 <p className="text-gray-400 text-sm mt-1">{description}</p>
                                             </div>
                                         </CardContent>
@@ -345,44 +368,44 @@ const HomePage = () => {
                     </div>
 
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12 py-16" id="shop">
+                        <section id="shop" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
                             <h1 className="font-bold text-2xl md:text-5xl text-center pb-12">Shop Now</h1>
 
                             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {/* Card 1: Shirt */}
-                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300">
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-xl transition-shadow duration-300">
                                     <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                                         <img src="/assests/players/REDZ Candid Photoshoot-16.jpg" alt="Team Shirt" className="w-full h-48 object-cover rounded-md" />
-                                        <h3 className="text-white text-xl font-semibold">Team Shirt</h3>
+                                        <h3 className="text-[#B6995A] text-xl font-semibold">Team Shirt</h3>
                                         <p className="text-gray-400 text-sm">Official RPL merchandise for fans and players alike.</p>
-                                        <p className="text-white font-bold text-lg">₹799</p>
-                                        <Button variant="default" className="bg-red-600 hover:bg-red-700 transition-colors">
+                                        <p className="text-[#B6995A] font-bold text-lg">₹799</p>
+                                        <Button variant="default" className="bg-[#B6995A] hover:bg-[#B6995A]/80 transition-colors">
                                             Add to Cart
                                         </Button>
                                     </CardContent>
                                 </Card>
 
                                 {/* Card 2: Shorts */}
-                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300">
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-xl transition-shadow duration-300">
                                     <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                                         <img src="/assests/players/REDZ Candid Photoshoot-16.jpg" alt="Team Shorts" className="w-full h-48 object-cover rounded-md" />
-                                        <h3 className="text-white text-xl font-semibold">Team Shorts</h3>
+                                        <h3 className="text-[#B6995A] text-xl font-semibold">Team Shorts</h3>
                                         <p className="text-gray-400 text-sm">Lightweight and durable shorts for performance.</p>
-                                        <p className="text-white font-bold text-lg">₹499</p>
-                                        <Button variant="default" className="bg-red-600 hover:bg-red-700 transition-colors">
+                                        <p className="text-[#B6995A] font-bold text-lg">₹499</p>
+                                        <Button variant="default" className="bg-[#B6995A] hover:bg-[#B6995A]/80 transition-colors">
                                             Add to Cart
                                         </Button>
                                     </CardContent>
                                 </Card>
 
                                 {/* Card 3: Shoes */}
-                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow duration-300">
+                                <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-xl transition-shadow duration-300">
                                     <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                                         <img src="/assests/players/REDZ Candid Photoshoot-16.jpg" alt="Rugby Shoes" className="w-full h-48 object-cover rounded-md" />
-                                        <h3 className="text-white text-xl font-semibold">Rugby Shoes</h3>
+                                        <h3 className="text-[#B6995A] text-xl font-semibold">Rugby Shoes</h3>
                                         <p className="text-gray-400 text-sm">High-traction shoes built for speed and grip.</p>
-                                        <p className="text-white font-bold text-lg">₹1,299</p>
-                                        <Button variant="default" className="bg-red-600 hover:bg-red-700 transition-colors">
+                                        <p className="text-[#B6995A] font-bold text-lg">₹1,299</p>
+                                        <Button variant="default" className="bg-[#B6995A] hover:bg-[#B6995A]/80 transition-colors">
                                             Add to Cart
                                         </Button>
                                     </CardContent>
@@ -394,19 +417,19 @@ const HomePage = () => {
 
                     {/* footer */}
                     <div>
-                        <section className="bg-black text-white px-4 md:px-12 py-16" id="contact">
+                        <section id="contact" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
                             <h1 className="font-bold text-2xl md:text-5xl text-center mb-12">Contact Us</h1>
                             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
                                 {/* Email Card */}
                                 <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow">
                                     <CardContent className="p-6 space-y-4 text-center md:text-left">
-                                        <div className="flex items-center gap-5">
-                                            <Mail className="h-8 w-8 mx-auto md:mx-0 text-white" />
-                                            <h3 className="text-xl text-white font-bold">Email</h3>
+                                        <div className="flex flex-col items-center md:flex-row md:items-start gap-3 md:gap-5">
+                                            <Mail className="h-8 w-8 text-[#B6995A]" />
+                                            <h3 className="text-xl text-[#B6995A] font-bold text-center md:text-left">Email</h3>
                                         </div>
                                         <p className="text-gray-400">For sponsorships or partnerships, reach out to us directly.</p>
-                                        <Link href="mailto:contact@delhiredz.in" className="text-blue-600 hover:underline block">
+                                        <Link href="mailto:contact@delhiredz.in" className="text-[#B6995A] hover:underline block">
                                             contact@delhiredz.in
                                         </Link>
                                     </CardContent>
@@ -415,12 +438,12 @@ const HomePage = () => {
                                 {/* Phone Card */}
                                 <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow">
                                     <CardContent className="p-6 space-y-4 text-center md:text-left">
-                                        <div className="flex items-center gap-5">
-                                            <Phone className="h-8 w-8 mx-auto md:mx-0 text-white" />
-                                            <h3 className="text-xl text-white font-bold">Phone</h3>
+                                        <div className="flex flex-col items-center md:flex-row md:items-start gap-3 md:gap-5">
+                                            <Phone className="h-8 w-8 text-[#B6995A]" />
+                                            <h3 className="text-xl text-[#B6995A] font-bold text-center md:text-left">Phone</h3>
                                         </div>
                                         <p className="text-gray-400">Call us for inquiries or collaboration opportunities.</p>
-                                        <Link href="tel:+919876543210" className="text-blue-600 hover:underline block">
+                                        <Link href="tel:+919876543210" className="text-[#B6995A] hover:underline block">
                                             +91 98765 43210
                                         </Link>
                                     </CardContent>
@@ -429,16 +452,16 @@ const HomePage = () => {
                                 {/* Office Card */}
                                 <Card className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-white/10 hover:shadow-xl transition-shadow">
                                     <CardContent className="p-6 space-y-4 text-center md:text-left">
-                                        <div className="flex items-center gap-5">
-                                            <MapPin className="h-8 w-8 mx-auto md:mx-0 text-white" />
-                                            <h3 className="text-xl text-white font-bold">Office</h3>
+                                        <div className="flex flex-col items-center md:flex-row md:items-start gap-3 md:gap-5">
+                                            <MapPin className="h-8 w-8 text-[#B6995A]" />
+                                            <h3 className="text-xl text-[#B6995A] font-bold text-center md:text-left">Office</h3>
                                         </div>
                                         <p className="text-gray-400">Visit us for discussions and collaborations.</p>
                                         <Link
                                             href="https://maps.google.com?q=456+Rugby+Lane,+Delhi,+India+110001"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-blue-600 hover:underline block"
+                                            className="text-[#B6995A] hover:underline block"
                                         >
                                             456 Rugby Lane, Delhi, India 110001
                                         </Link>
@@ -452,28 +475,34 @@ const HomePage = () => {
                     <footer className="bg-black text-white px-4 md:px-12 py-12 border-t">
                         <div className="max-w-7xl mx-auto flex flex-col items-center text-center space-y-6">
                             {/* Logo & Contact */}
-                            <h1 className="text-3xl font-semibold font-cursive">Logo</h1>
+                            <Image
+                                src="/assests/DR_LOGO.png"
+                                alt="logo"
+                                width={150}
+                                height={150}
+                                className="md:h-60 md:w-60 h-40 w-40"
+                            />
 
                             <div>
                                 <p className="font-semibold">Address:</p>
-                                <p>Level 1, 12 Sample St, Sydney NSW 2000</p>
+                                <p>Level 1, 12 Sample St, Delhi, India 110001</p>
                             </div>
 
                             <div>
                                 <p className="font-semibold">Contact:</p>
                                 <p>
-                                    <Link href="tel:18001234567" className="hover:underline text-blue-600">
+                                    <Link href="tel:18001234567" className="hover:underline text-[#B6995A]">
                                         1800 123 4567
                                     </Link>{" "}
                                     |{" "}
-                                    <Link href="mailto:contact@delhiredz.in" className="hover:underline text-blue-600">
+                                    <Link href="mailto:contact@delhiredz.in" className="hover:underline text-[#B6995A]">
                                         contact@delhiredz.in
                                     </Link>
                                 </p>
                             </div>
 
                             {/* Social Icons */}
-                            <div className="flex gap-4 text-black justify-center">
+                            <div className="flex gap-4 text-[#B6995A] justify-center">
                                 <Link href="#"><Facebook className="hover:text-blue-500" /></Link>
                                 <Link href="#"><Instagram className="hover:text-pink-500" /></Link>
                                 <Link href="#"><X className="hover:text-blue-400" /></Link>

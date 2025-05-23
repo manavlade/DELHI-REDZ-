@@ -41,6 +41,18 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-shine: shine var(--duration) infinite linear;
+  @keyframes shine {
+  0% {
+    background-position: 0% 0%;
+    }
+  50% {
+    background-position: 100% 100%;
+    }
+  to {
+    background-position: 0% 0%;
+    }
+  }
 }
 
 :root {
@@ -124,4 +136,9 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.text-outline-gold {
+  color: black;
+  -webkit-text-stroke: 1.5px #f3f3f1;
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
     { label: "About Us", href: "#manifesto" },
@@ -24,7 +25,12 @@ const Navbar = () => {
             <nav className="max-w-7xl mx-auto px-4 md:px-12 py-4 flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-bold cursor-pointer tracking-wide">
-                    Redz
+                    <Image
+                    src="/assests/DR_LOGO.png"
+                    alt="logo"
+                    width={50}
+                    height={50}
+                    />
                 </Link>
 
                 {/* Desktop Navigation */}
