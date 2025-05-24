@@ -310,7 +310,7 @@ const HomePage = () => {
                         <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">Meet The Team</h1>
 
                         <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#1a1a1a] to-black rounded-2xl border border-[#B6995A]/20 shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
-                           
+
                             <div className="flex-1 space-y-4">
                                 <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-sm text-[#B6995A] uppercase tracking-widest font-semibold">
                                     Head Coach
@@ -528,14 +528,14 @@ const HomePage = () => {
 
                             <div>
                                 <p className="font-semibold">Address:</p>
-                                <p>Level 1, 12 Sample St, Delhi, India 110001</p>
+                                <p>456 Rugby Lane, Delhi, India 110001</p>
                             </div>
 
                             <div>
                                 <p className="font-semibold">Contact:</p>
                                 <p>
                                     <Link href="tel:18001234567" className="hover:underline text-[#B6995A]">
-                                        1800 123 4567
+                                        +91 98765 43210
                                     </Link>{" "}
                                     |{" "}
                                     <Link href="mailto:contact@delhiredz.in" className="hover:underline text-[#B6995A]">
@@ -556,7 +556,7 @@ const HomePage = () => {
 
                         {/* Bottom line */}
                         <div className="mt-10 border-t pt-6 text-sm text-gray-500 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4">
-                            <p>© 2025 Relume. All rights reserved.</p>
+                            <p>© 2025  Redz. All rights reserved.</p>
                             <div className="flex gap-6 mt-4 md:mt-0">
                                 <Link href="#" className="hover:underline">Privacy Policy</Link>
                                 <Link href="#" className="hover:underline">Terms of Service</Link>
