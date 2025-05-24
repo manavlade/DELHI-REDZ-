@@ -217,71 +217,100 @@ const HomePage = () => {
 
                     {/* purpose section */}
                     <div>
-                        <section id="purpose" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
-                            <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">
-                                Our Purpose
-                            </h1>
+                        <section
+                            id="purpose"
+                            className="relative bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20 overflow-hidden"
+                        >
+                            {/* Background image aligned to left */}
+                            <div className="absolute inset-0 z-0 flex justify-start">
+                                <img
+                                    src="/assests/i1.png"
+                                    alt="Background"
+                                    className="h-full object-cover opacity-30 mix-blend-overlay w-[60%]" // adjust width as needed
+                                />
+                                <div className="absolute inset-0 bg-black/50" />
+                            </div>
 
-                            <div className="max-w-7xl mx-auto">
-                                {/* Feature Cards */}
-                                <section className="py-8">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                        {features.map((feature, idx) => (
-                                            <Card
-                                                key={idx}
-                                                className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-2xl transition-shadow duration-300"
-                                            >
-                                                <CardContent className="flex items-start gap-4 p-6">
-                                                    <div className="flex-shrink-0">
-                                                        <feature.icon className="h-10 w-10 text-[#B6995A]" />
-                                                    </div>
-                                                    <div>
-                                                        <h3 className="text-xl text-[#B6995A] font-bold">{feature.title}</h3>
-                                                        <p className="text-gray-400 text-sm mt-1">{feature.subtitle}</p>
-                                                    </div>
-                                                </CardContent>
-                                            </Card>
-                                        ))}
-                                    </div>
-                                </section>
+                            {/* Foreground content */}
+                            <div className="relative z-10">
+                                <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">
+                                    Our Purpose
+                                </h1>
+
+                                <div className="max-w-7xl mx-auto">
+                                    <section className="py-8">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                            {features.map((feature, idx) => (
+                                                <Card
+                                                    key={idx}
+                                                    className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-2xl transition-shadow duration-300"
+                                                >
+                                                    <CardContent className="flex items-start gap-4 p-6">
+                                                        <div className="flex-shrink-0">
+                                                            <feature.icon className="h-10 w-10 text-[#B6995A]" />
+                                                        </div>
+                                                        <div>
+                                                            <h3 className="text-xl text-[#B6995A] font-bold">{feature.title}</h3>
+                                                            <p className="text-gray-400 text-sm mt-1">{feature.subtitle}</p>
+                                                        </div>
+                                                    </CardContent>
+                                                </Card>
+                                            ))}
+                                        </div>
+                                    </section>
+                                </div>
                             </div>
                         </section>
                     </div>
-
 
                     {/* about rpl section */}
                     <div>
-                        <section id="about" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
-                            <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">About RPL</h1>
+                        <section
+                            id="about"
+                            className="relative bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20 overflow-hidden"
+                        >
+                            <div className="absolute inset-0 z-0">
+                                <img
+                                    src="/assests/i2.png"
+                                    alt="Background"
+                                    className="w-full h-full object-cover opacity-30 mix-blend-overlay"
+                                />
+                                <div className="absolute inset-0 bg-black/50" />
+                            </div>
+                            <div className="relative z-10">
+                                <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">
+                                    About RPL
+                                </h1>
 
-                            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {highlights.map(({ icon: Icon, title, description }, index) => (
-                                    <Card
-                                        key={index}
-                                        className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-2xl transition-shadow duration-300"
-                                    >
-                                        <CardContent className="flex items-start gap-4 p-6">
-                                            <div className="flex-shrink-0">
-                                                <Icon className="h-10 w-10 text-[#B6995A]" />
-                                            </div>
-                                            <div>
-                                                <h3 className="text-lg text-[#B6995A] font-bold">{title}</h3>
-                                                <p className="text-gray-400 text-sm mt-1">{description}</p>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                ))}
+                                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    {highlights.map(({ icon: Icon, title, description }, index) => (
+                                        <Card
+                                            key={index}
+                                            className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-2xl transition-shadow duration-300"
+                                        >
+                                            <CardContent className="flex items-start gap-4 p-6">
+                                                <div className="flex-shrink-0">
+                                                    <Icon className="h-10 w-10 text-[#B6995A]" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="text-lg text-[#B6995A] font-bold">{title}</h3>
+                                                    <p className="text-gray-400 text-sm mt-1">{description}</p>
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    ))}
+                                </div>
                             </div>
                         </section>
 
+
                     </div>
 
-                    {/* our team section */}
                     <section id="team" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
                         <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">Meet The Team</h1>
 
                         <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#1a1a1a] to-black rounded-2xl border border-[#B6995A]/20 shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
-                            {/* Left Side - Text Content */}
+                           
                             <div className="flex-1 space-y-4">
                                 <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-sm text-[#B6995A] uppercase tracking-widest font-semibold">
                                     Head Coach
@@ -292,8 +321,6 @@ const HomePage = () => {
                                     for the All Blacks Sevens and was named World Rugby Sevens Player of the Year in 2012.
                                 </p>
                             </div>
-
-                            {/* Right Side - Image */}
                             <div className="flex-shrink-0">
                                 <Image
                                     src="/assests/headcoach.png"
@@ -340,30 +367,47 @@ const HomePage = () => {
                     </div>
 
                     <div>
-                        <section id="why" className="bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20">
-                            <h1 className="font-bold text-2xl md:text-5xl text-center pb-12">
-                                WHY RUGBY, WHY NOW?
-                            </h1>
+                        <section
+                            id="why"
+                            className="relative bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20 overflow-hidden"
+                        >
+                            {/* Right-aligned background image */}
+                            <div className="absolute inset-0 z-0 flex justify-end">
+                                <img
+                                    src="/assests/i3.png"
+                                    alt="Background"
+                                    className="h-full object-cover opacity-30 mix-blend-overlay w-[60%]" // Adjust width as needed
+                                />
+                                <div className="absolute inset-0 bg-black/50" />
+                            </div>
 
-                            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {rugbyHighlights.map(({ icon: Icon, title, description }, index) => (
-                                    <Card
-                                        key={index}
-                                        className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-xl transition-shadow duration-300"
-                                    >
-                                        <CardContent className="flex items-start gap-4 p-6">
-                                            <div className="flex-shrink-0">
-                                                <Icon className="h-10 w-10 text-[#B6995A]" />
-                                            </div>
-                                            <div>
-                                                <h3 className="text-lg text-[#B6995A] font-bold">{title}</h3>
-                                                <p className="text-gray-400 text-sm mt-1">{description}</p>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                ))}
+                            {/* Foreground content */}
+                            <div className="relative z-10">
+                                <h1 className="font-bold text-2xl md:text-5xl text-center pb-12">
+                                    WHY RUGBY, WHY NOW?
+                                </h1>
+
+                                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    {rugbyHighlights.map(({ icon: Icon, title, description }, index) => (
+                                        <Card
+                                            key={index}
+                                            className="bg-gradient-to-br from-[#1a1a1a] to-[#000000] border border-[#B6995A]/20 hover:shadow-xl transition-shadow duration-300"
+                                        >
+                                            <CardContent className="flex items-start gap-4 p-6">
+                                                <div className="flex-shrink-0">
+                                                    <Icon className="h-10 w-10 text-[#B6995A]" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="text-lg text-[#B6995A] font-bold">{title}</h3>
+                                                    <p className="text-gray-400 text-sm mt-1">{description}</p>
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    ))}
+                                </div>
                             </div>
                         </section>
+
                     </div>
 
                     <div>
