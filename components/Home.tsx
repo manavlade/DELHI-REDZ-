@@ -195,7 +195,7 @@ const HomePage = () => {
                     <div>
                         <section className="bg-black text-white px-4 md:px-12 py-20" id="manifesto">
                             <div className="max-w-5xl mx-auto text-center relative">
-                                <h2 className="text-2xl md:text-5xl font-bold mb-8">Our Manifesto</h2>
+                                <h2 className="text-2xl md:text-5xl text-red-500 font-extrabold mb-8">DIL DIL MEIN REDZ</h2>
 
                                 <div className="bg-gradient-to-br from-[#1a1a1a] to-black border border-white/10 rounded-xl p-8 md:p-12 shadow-xl">
                                     <p className="text-xl md:text-2xl italic text-gray-300 leading-relaxed relative z-10">
@@ -221,17 +221,15 @@ const HomePage = () => {
                             id="purpose"
                             className="relative bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20 overflow-hidden"
                         >
-                            {/* Background image aligned to left */}
                             <div className="absolute inset-0 z-0 flex justify-start">
                                 <img
-                                    src="/assests/i1.png"
+                                    src="/assests/i5.jpg"
                                     alt="Background"
-                                    className="h-full object-cover opacity-30 mix-blend-overlay w-[60%]" // adjust width as needed
+                                    className="h-full object-cover opacity-30 mix-blend-overlay" 
                                 />
                                 <div className="absolute inset-0 bg-black/50" />
                             </div>
 
-                            {/* Foreground content */}
                             <div className="relative z-10">
                                 <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">
                                     Our Purpose
@@ -262,8 +260,6 @@ const HomePage = () => {
                             </div>
                         </section>
                     </div>
-
-                    {/* about rpl section */}
                     <div>
                         <section
                             id="about"
@@ -271,7 +267,7 @@ const HomePage = () => {
                         >
                             <div className="absolute inset-0 z-0">
                                 <img
-                                    src="/assests/i2.png"
+                                    src="/assests/i6.jpg"
                                     alt="Background"
                                     className="w-full h-full object-cover opacity-30 mix-blend-overlay"
                                 />
@@ -279,7 +275,7 @@ const HomePage = () => {
                             </div>
                             <div className="relative z-10">
                                 <h1 className="font-bold text-2xl md:text-5xl text-center text-white mb-12">
-                                    About RPL
+                                    About RUBY PREMIER LEAGUE
                                 </h1>
 
                                 <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -371,17 +367,15 @@ const HomePage = () => {
                             id="why"
                             className="relative bg-gradient-to-b from-[#7A1120] to-black text-white px-4 md:px-12 py-20 overflow-hidden"
                         >
-                            {/* Right-aligned background image */}
                             <div className="absolute inset-0 z-0 flex justify-end">
                                 <img
-                                    src="/assests/i3.png"
+                                    src="/assests/i8.jpg"
                                     alt="Background"
-                                    className="h-full object-cover opacity-30 mix-blend-overlay w-[60%]" // Adjust width as needed
+                                    className="h-full object-cover opacity-30 mix-blend-overlay" 
                                 />
                                 <div className="absolute inset-0 bg-black/50" />
                             </div>
 
-                            {/* Foreground content */}
                             <div className="relative z-10">
                                 <h1 className="font-bold text-2xl md:text-5xl text-center pb-12">
                                     WHY RUGBY, WHY NOW?
